@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buttons</title>
+</head>
+<body>
+    <h2>Counter: <span id="count">0</span></h2>
+<button onclick="add()">addition</button>
+<button onclick="sub()">subtraction</button>
+<button onclick="multiply()">multiply</button>
+<button onclick="divide()">divide</button>
+<button onclick="reset()">reset</button>
+<script>
+    let count=0;
+   function add(){
+        count++;
+        document.getElementById("count").innerHTML=count;
+    }
+    function sub(){
+        count--;
+        document.getElementById("count").innerHTML=count;
+    }
+    function multiply(){
+        count*=2;
+        document.getElementById("count").innerHTML=count;
+    }
+    function divide(){
+        count/=2;
+        document.getElementById("count").innerHTML=count;
+    }
+    function reset(){
+        count=0;
+        document.getElementById("count").innerHTML=count;
+    }   
+</script>
+</body>
+</html>

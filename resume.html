@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thanigaivel V - Software Engineer Resume">
+  <title>Thanigaivel V | Resume</title>
+
+  <link rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    type="image/png">
+
+  <style>
+    :root {
+      --navy: #0b1e2e;
+      --blue: #2563eb;
+      --blue-dark: #1e3a8a;
+      --pale-blue: #eff6ff;
+      --page: #f0f4fa;
+      --border: #cfdae9;
+      --text: #1a2b3c;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+      padding: 36px 20px;
+    }
+
+    .resume {
+      width: min(100%, 1100px);
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 8px solid var(--blue);
+      padding: 38px;
+      margin-bottom: 34px;
+      box-shadow: 0 8px 24px rgba(30, 58, 138, 0.08);
+    }
+
+    .header-content {
+      text-align: center;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      flex: 0 0 15 0px ;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 4px solid #dbeafe;
+      box-shadow: 0 5px 16px rgba(37, 99, 235, 0.18);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      color: var(--blue-dark);
+      text-decoration: underline;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .role {
+      color: var(--blue);
+      font-family: Arial, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 22px;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .contact-details span {
+      color: var(--text);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .contact-details a:hover,
+    .portfolio-link:hover {
+      color: var(--blue-dark);
+      text-decoration: underline;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 12px rgba(30, 58, 138, 0.04);
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: Arial, sans-serif;
+      font-size: 1.12rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .objective {
+      line-height: 1.85;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 420px;
+    }
+
+    th,
+    td {
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--pale-blue);
+      color: var(--blue-dark);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8faff;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .skill-list li {
+      background: var(--pale-blue);
+      color: var(--blue-dark);
+      border: 1px solid #a9c5f7;
+      border-radius: 5px;
+      padding: 8px 14px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .certification-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      padding: 0;
+    }
+
+    .certification-list li {
+      background: #f8faff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      padding: 13px 16px;
+      overflow-wrap: anywhere;
+    }
+
+    .project-card + .project-card {
+      margin-top: 16px;
+    }
+
+    .project-card a {
+      color: var(--blue);
+      overflow-wrap: anywhere;
+    }
+
+    .project-card {
+      border-left: 4px solid var(--blue);
+      background: #f8faff;
+      padding: 18px 20px;
+    }
+
+    .project-card h3 {
+      color: var(--blue-dark);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .project-card p + p {
+      margin-top: 8px;
+    }
+
+    .tech-label {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .hobby-list {
+      padding-left: 22px;
+    }
+
+    .hobby-list li {
+      padding: 4px 0;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--blue);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .portfolio-frame {
+      display: block;
+      width: 100%;
+      height: 520px;
+      border: 1px solid var(--border);
+      background: var(--pale-blue);
+    }
+
+    .portfolio-note {
+      color: #536579;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .declaration {
+      line-height: 1.85;
+    }
+
+    .signature-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+      margin-top: 22px;
+      border-top: 2px solid var(--navy);
+    }
+
+    .signature-row p {
+      margin-top: 6px;
+    }
+
+    .signature {
+      text-align: right;
+    }
+
+    .signature-name {
+      color: var(--blue-dark);
+      font-weight: 700;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #536579;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      padding: 6px 0 20px;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 18px 10px;
+      }
+
+      .header-card {
+        padding: 28px 18px;
+      }
+
+      .header-main {
+        flex-direction: column-reverse;
+        gap: 18px;
+      }
+
+      .profile-photo {
+        width: 125px;
+        height: 125px;
+        flex-basis: 125px;
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      .contact-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .portfolio-frame {
+        height: 360px;
+      }
+
+      .signature {
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .resume {
+        width: 100%;
+      }
+
+      .header-card,
+      .section {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .portfolio-frame {
+        height: 360px;
+      }
+
+      .footer-note {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="resume">
+
+   
+    <header class="header-card">
+      <div class="header-main">
+        <div class="header-content">
+        <p class="eyebrow">Resume / Personal Profile</p>
+
+        <h1>Thanigaivel V</h1>
+
+        <p class="role">Software Engineer</p>
+
+        <div class="contact-details">
+          <span>Phone: <a href="tel:9962139958">9962139958</a></span>
+          <span>Email: <a href="mailto:thanigaivel6119@gmail.com">thanigaivel6119@gmail.com</a></span>
+          <span>Location: Chennai, Tamil Nadu</span>
+          <span>GitHub: <a href="https://github.com/THANI1319" target="_blank" rel="noopener noreferrer">github.com/THANI1319</a></span>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/thanigaivel-v-" target="_blank" rel="noopener noreferrer">View Profile</a></span>
+        </div>
+        </div>
+        <img class="profile-photo" src="src/profile.jpg" alt="Thanigaivel V profile photo">
+      </div>
+    </header>
+
+   
+    <section class="section">
+      <h2 class="section-title">Career Objective</h2>
+
+      <p class="objective">
+        To work in a challenging environment where I can utilize my
+        skills and knowledge to contribute to the growth of the
+        organization while continuously learning and developing
+        professionally.
+      </p>
+    </section>
+
+    
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Qualification</th>
+              <th scope="col">Percentage / CGPA</th>
+              <th scope="col">Passing Year</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>10th Standard</td>
+              <td>100%</td>
+              <td>2021</td>
+            </tr>
+
+            <tr>
+              <td>12th Standard</td>
+              <td>70%</td>
+              <td>2023</td>
+            </tr>
+
+            <tr>
+              <td>B.Tech Information Technology</td>
+              <td>7.90 CGPA</td>
+              <td>2027</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+   
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+
+      <ul class="skill-list">
+        <li>C Programming</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Web Development</li>
+      </ul>
+    </section>
+
+  
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      <div id="projects"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul id="certifications" class="certification-list"></ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Portfolio</h2>
+
+      <a
+        class="portfolio-link"
+        href="https://thani-portfolio.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Visit My Portfolio
+      </a>
+
+      <iframe
+        class="portfolio-frame"
+        src="https://thani-portfolio.vercel.app/"
+        title="Thanigaivel V Portfolio"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+
+      <p class="portfolio-note">
+        If the portfolio does not load here, use the link above
+        to open it in a new tab.
+      </p>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">Declaration</h2>
+
+      <p class="declaration">
+        I hereby declare that the above information is true to the
+        best of my knowledge and belief.
+      </p>
+
+      <div class="signature-row">
+        <div>
+          <p><strong>Date:</strong> __________________</p>
+          <p><strong>Place:</strong> Chennai</p>
+        </div>
+
+        <div class="signature">
+          <p><strong>Signature:</strong></p>
+          <p class="signature-name">Thanigaivel V</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download-resume">
+      <h2 class="section-title">Download Resume</h2>
+      <p>Want a copy of my resume? Use the link below to view or download it.</p>
+      <p style="margin-top: 14px;">
+        <a class="portfolio-link"
+           href="https://drive.google.com/file/d/196xTZzDjz-ccRtJClcpPccWPwT_-icbt/view?usp=drive_link"
+           target="_blank"
+           rel="noopener noreferrer">Download My Resume</a>
+      </p>
+    </section>
+
+    <p class="footer-note">Thanigaivel V · Resume</p>
+
+  </main>
+
+  <script>
+    // Portfolio content is kept in one object so it is easy to update.
+    const portfolioData = {
+      projects: [
+        {
+          title: "OmniFlow – AI-Powered Universal Workflow Automation Platform",
+          description: "Designed a centralized workflow automation concept that connects applications such as Gmail, Google Calendar, Slack, Jira, and Notion. It automates repetitive tasks using triggers, conditions, and actions—for example, creating a Jira task and sending a Slack notification when an urgent email arrives.",
+          technologies: "React.js, FastAPI, REST APIs, OAuth 2.0, Relational Database"
+        },
+        {
+          title: "Performance Analysis of Virtualization Techniques in Cloud Computing",
+          label: "Mini Project",
+          description: "Analyzed virtualization techniques used in cloud computing and compared their performance based on resource utilization and scalability.",
+          technologies: "Python, psutil, Docker, Virtual Machines, Cloud Computing"
+        }
+      ],
+      certifications: [
+        {
+          title: "Embedded Systems Training & Internship Certificate",
+          issuer: "MSME"
+        },
+        {
+          title: "Introduction to Cyber Security",
+          issuer: "Arjun Vision Internship"
+        },
+        {
+          title: "Analyst Trainee (Cloud Computing Intern)",
+          issuer: "Eagle-HiTech Softclou",
+          duration: "June 2026 – July 2026"
+        }
+      ],
+      links: {
+        github: "https://github.com/THANI1319",
+        linkedin: "https://www.linkedin.com/in/thanigaivel-v-",
+        resume: "https://drive.google.com/file/d/196xTZzDjz-ccRtJClcpPccWPwT_-icbt/view?usp=drive_link"
+      }
+    };
+
+    const projectsContainer = document.getElementById("projects");
+    const certificationsList = document.getElementById("certifications");
+
+    function renderProjects() {
+      projectsContainer.innerHTML = portfolioData.projects.map((project) => `
+        <article class="project-card">
+          ${project.label ? `<p class="tech-label">${project.label}</p>` : ""}
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <p><span class="tech-label">Technologies:</span> ${project.technologies}</p>
+        </article>
+      `).join("");
+    }
+
+    function renderCertifications() {
+      certificationsList.innerHTML = portfolioData.certifications.map((certificate) => `
+        <li>
+          <strong>${certificate.title}</strong> — ${certificate.issuer}
+          ${certificate.duration ? `<br><span>${certificate.duration}</span>` : ""}
+        </li>
+      `).join("");
+    }
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a");
+      if (!link) return;
+      if (link.href) {
+        console.info("Portfolio link selected:", link.href);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProjects();
+      renderCertifications();
+    });
+    renderProjects();
+    renderCertifications();
+  </script>
+
+</body>
+</html>
